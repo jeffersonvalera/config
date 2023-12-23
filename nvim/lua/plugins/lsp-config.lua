@@ -47,7 +47,7 @@ return {
       mason_tool_installer.setup({
         ensure_installed = {
           "prettier", -- prettier formatter
-          "stylua", -- lua formatter
+          "stylua",   -- lua formatter
           "eslint_d", -- js linter
         },
       })
@@ -114,8 +114,8 @@ return {
 
         opts.desc = "Format File"
         vim.keymap.set('n', '<space>lf', function()
-      vim.lsp.buf.format { async = true }
-    end, opts)
+          vim.lsp.buf.format { async = true }
+        end, opts)
       end
 
       -- used to enable autocompletion (assign to every lsp server config)
@@ -165,7 +165,7 @@ return {
         on_attach = on_attach,
       })
 
-      lspconfig["rust_analyser"].setup({
+      lspconfig["rust_analyzer"].setup({
         capabilities = capabilities,
         on_attach = on_attach,
       })
