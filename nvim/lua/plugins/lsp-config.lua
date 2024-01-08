@@ -67,6 +67,18 @@ return {
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 			local keymap = vim.keymap -- for conciseness
+			vim.diagnostic.config({
+				update_in_insert = true,
+				float = {
+					focusable = false,
+					style = "minimal",
+					border = "rounded",
+					source = "always",
+					header = "",
+					prefix = "",
+				},
+				virtual_text = true,
+			})
 
 			local opts = { noremap = true, silent = true }
 			local on_attach = function(client, bufnr)
