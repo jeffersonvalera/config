@@ -13,7 +13,6 @@ vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
 
-
 -- clipboard
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
@@ -31,3 +30,6 @@ vim.keymap.set("i", "<C-c>", "<ESC>", { desc = "Exit insert mode" })
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Line Up" })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Line Down" })
+
+--Terminal Mappings
+vim.keymap.set("t", "<Esc>", "<C-\\><C-N>", { desc = "Exit Terminal Mode" })
