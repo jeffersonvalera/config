@@ -176,10 +176,10 @@ return {
 				on_attach = on_attach,
 			})
 
-			lspconfig["rust_analyzer"].setup({
-				capabilities = capabilities,
-				on_attach = on_attach,
-			})
+			-- lspconfig["rust_analyzer"].setup({
+			-- 	capabilities = capabilities,
+			-- 	on_attach = on_attach,
+			-- })
 
 			lspconfig["bashls"].setup({
 				capabilities = capabilities,
@@ -188,6 +188,11 @@ return {
 
 			-- configure css server
 			lspconfig["cssls"].setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+
+			lspconfig["vimls"].setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})

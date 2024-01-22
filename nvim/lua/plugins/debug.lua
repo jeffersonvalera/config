@@ -1,3 +1,6 @@
+return {
+
+}
 --[[ local bindings = function(dap, dapui)
 	vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Debug - Toggle Break Point" })
 	vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "Debug - Continue/Start" })
@@ -60,18 +63,18 @@ local rust_config = function(dap)
 		},
 	}
 end ]]
-return {
-	"mfussenegger/nvim-dap",
-	dependencies = {
-		"rcarriga/nvim-dap-ui",
-	},
-	config = function()
-		local dap, dapui = require("dap"), require("dapui")
+--[[ return {
+  "mfussenegger/nvim-dap",
+  dependencies = {
+    "rcarriga/nvim-dap-ui",
+  },
+  config = function()
+    local dap, dapui = require("dap"), require("dapui")
 
-		dapui.setup()
+    dapui.setup()
 
-		bindings(dap, dapui)
-		init_adapters(dap)
-		rust_config(dap)
-	end,
-}
+    bindings(dap, dapui)
+    init_adapters(dap)
+    rust_config(dap)
+  end,
+} ]]
