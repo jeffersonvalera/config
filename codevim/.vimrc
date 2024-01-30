@@ -21,6 +21,6 @@ nnoremap n nzz
 " Previous search match
 nnoremap N Nzz
 
-" Escape inser mode
-inoremap jf <Esc>
+" Escape insrt mode
+inoremap fj   <Esc>
 
