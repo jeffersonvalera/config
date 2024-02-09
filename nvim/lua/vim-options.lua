@@ -46,7 +46,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>h", ":nohlsearch<cr>", { desc = "Clear Search Hightlight" })
 
 -- Mappings Insert Mode
-vim.keymap.set("i", "fj", "<ESC>", { desc = "Back to Normal Mode" })
+-- vim.keymap.set("i", "fj", "<ESC>", { desc = "Back to Normal Mode" })
 vim.keymap.set("i", "<C-c>", "<ESC>", { desc = "Exit insert mode" })
 
 -- Mappings Visual Mode
