@@ -26,7 +26,7 @@ return {
 				server = {
 					on_attach = function(client, bufnr)
 						local lsp_on_attach = require("lsp-on-attach-fn")
-                        vim.lsp.inlay_hints.enable(bufnr, true)
+                        -- vim.lsp.inlay_hints.enable(bufnr, true)
 						lsp_on_attach(client, bufnr)
 					end,
 				},
