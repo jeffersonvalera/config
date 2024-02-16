@@ -47,6 +47,18 @@ return function(client, bufnr)
 		vim.lsp.buf.format({ async = true })
 	end, opts)
 
+	if vim.lsp.inlay_hint then
+		vim.lsp.inlay_hint.enable(bufnr, true)
+		opts.desc = "Enable Hints"
+		vim.keymap.set("n", "<leader>lh", function()
+			vim.lsp.inlay_hint.enable(0, true)
+		end, opts)
+        opts.desc = "Disable Hints"
+		vim.keymap.set("n", "<leader>lH", function()
+			vim.lsp.inlay_hint.enable(0, false)
+		end, opts)
+	end
+
 	-- Display Inferencial Types
 	-- local inlay_hints = require("inlay-hints")
 	-- inlay_hints.on_attach(client, bufnr)
